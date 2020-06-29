@@ -4,8 +4,8 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.hfad.movies.json.Movie
-import java.util.*
+import com.hfad.movies.model.FavouriteMovie
+import com.hfad.movies.model.Movie
 
 @Database(entities = [Movie::class, FavouriteMovie::class], version = 2, exportSchema = false)
 abstract class MovieDatabase: RoomDatabase() {

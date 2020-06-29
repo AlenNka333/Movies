@@ -1,17 +1,16 @@
 package com.hfad.movies.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.hfad.movies.R
-import com.hfad.movies.json.Movie
-import com.hfad.movies.onClick.onPosterClickListener
+import com.hfad.movies.model.Movie
+import com.hfad.movies.interfaces.OnPosterClickListener
 import com.squareup.picasso.Picasso
 
-class RecyclerAdapter(private val onClickListener: onPosterClickListener):
+class RecyclerAdapter(private val onClickListener: OnPosterClickListener):
     RecyclerView.Adapter<RecyclerAdapter.MovieHolder>() {
 
     var list: ArrayList<Movie> = ArrayList()

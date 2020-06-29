@@ -16,16 +16,16 @@ import com.google.gson.GsonBuilder
 import com.hfad.movies.R
 import com.hfad.movies.adapter.RecyclerAdapter
 import com.hfad.movies.database.MovieViewModel
-import com.hfad.movies.json.HomeFeed
-import com.hfad.movies.json.Movie
-import com.hfad.movies.onClick.onPosterClickListener
+import com.hfad.movies.model.HomeFeed
+import com.hfad.movies.model.Movie
+import com.hfad.movies.interfaces.OnPosterClickListener
 import com.hfad.movies.ui.detail.DetailFragment
 import com.hfad.movies.utils.NetworkUtils
 import okhttp3.*
 import java.io.IOException
 
 
-class HomeFragment : Fragment(), onPosterClickListener {
+class HomeFragment : Fragment(), OnPosterClickListener {
 
     lateinit var textView1: TextView
     lateinit var textView2: TextView
@@ -97,7 +97,6 @@ class HomeFragment : Fragment(), onPosterClickListener {
     }
 
 
-
     fun fetchJson(){
 
         val url = NetworkUtils().buildUrl(1, flagSort).toString()
@@ -107,7 +106,7 @@ class HomeFragment : Fragment(), onPosterClickListener {
 
         client.newCall(request).enqueue(object: Callback {
             override fun onFailure(call: Call, e: IOException) {
-                Toast.makeText(layoutInflater.context, "check url", Toast.LENGTH_SHORT)
+                Toast.makeText(layoutInflater.context, "check url", Toast.LENGTH_SHORT).show()
             }
 
             override fun onResponse(call: Call, response: Response) {

@@ -1,4 +1,4 @@
-package com.hfad.movies.json
+package com.hfad.movies.model
 
 import com.google.gson.annotations.SerializedName
 

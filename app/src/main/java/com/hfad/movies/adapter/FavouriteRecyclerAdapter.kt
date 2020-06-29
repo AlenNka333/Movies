@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.hfad.movies.R
-import com.hfad.movies.database.FavouriteMovie
+import com.hfad.movies.model.FavouriteMovie
 import com.squareup.picasso.Picasso
 
 class FavouriteRecyclerAdapter: RecyclerView.Adapter<FavouriteRecyclerAdapter.FavouritesHolder>() {
