@@ -1,8 +1,8 @@
-package com.hfad.movies.database
+package com.hfad.movies.model
 
 import androidx.room.Entity
 import androidx.room.Ignore
-import com.hfad.movies.json.Movie
+import com.hfad.movies.model.Movie
 
 @Entity(tableName = "favourite_movies")
 class FavouriteMovie : Movie {

@@ -11,8 +11,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.hfad.movies.R
 import com.hfad.movies.adapter.FavouriteRecyclerAdapter
-import com.hfad.movies.adapter.RecyclerAdapter
-import com.hfad.movies.database.FavouriteMovie
+import com.hfad.movies.model.FavouriteMovie
 import com.hfad.movies.database.MovieViewModel
 
 class FavouritesFragment : Fragment() {

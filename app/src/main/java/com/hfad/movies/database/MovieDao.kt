@@ -2,7 +2,8 @@ package com.hfad.movies.database
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.hfad.movies.json.Movie
+import com.hfad.movies.model.FavouriteMovie
+import com.hfad.movies.model.Movie
 
 @Dao
 interface MovieDao {

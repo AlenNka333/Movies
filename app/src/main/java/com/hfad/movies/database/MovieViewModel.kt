@@ -3,7 +3,8 @@ package com.hfad.movies.database
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import com.hfad.movies.json.Movie
+import com.hfad.movies.model.FavouriteMovie
+import com.hfad.movies.model.Movie
 
 class MovieViewModel(application: Application): AndroidViewModel(application) {
 

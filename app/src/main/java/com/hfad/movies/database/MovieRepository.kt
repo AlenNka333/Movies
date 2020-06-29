@@ -3,7 +3,8 @@ package com.hfad.movies.database
 import android.app.Application
 import android.os.AsyncTask
 import androidx.lifecycle.LiveData
-import com.hfad.movies.json.Movie
+import com.hfad.movies.model.FavouriteMovie
+import com.hfad.movies.model.Movie
 
 class MovieRepository(application: Application) {
 
@@ -37,7 +38,7 @@ class MovieRepository(application: Application) {
         val deleteMovieAsyncTask = DeleteMovieAsyncTask(movieDao).execute(movie)
     }
 
-    fun getMovie(id: Int): Movie{
+    fun getMovie(id: Int): Movie {
         return GetMovieAsyncTask(movieDao).execute(id).get()
     }
 
@@ -104,14 +105,14 @@ class MovieRepository(application: Application) {
     }
 
     inner class GetMovieAsyncTask(movieDao: MovieDao): AsyncTask<Int, Unit, Movie>(){
-        override fun doInBackground(vararg params: Int?):Movie? {
+        override fun doInBackground(vararg params: Int?): Movie? {
             return movieDao.getMovie(params[0]!!)
         }
 
     }
 
     inner class GetFavouriteMovieAsyncTask(movieDao: MovieDao): AsyncTask<Int, Unit, FavouriteMovie>(){
-        override fun doInBackground(vararg params: Int?):FavouriteMovie? {
+        override fun doInBackground(vararg params: Int?): FavouriteMovie? {
             return movieDao.getFavouriteMovie(params[0]!!)
         }
 
